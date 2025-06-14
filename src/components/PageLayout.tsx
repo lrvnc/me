@@ -4,7 +4,6 @@ import { useLocation } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactInfo from '@/components/ContactInfo';
-import FloatingContactButton from '@/components/FloatingContactButton';
 
 type PageLayoutProps = {
   children: React.ReactNode;
@@ -25,7 +24,6 @@ const PageLayout = ({ children, showContact = true }: PageLayoutProps) => {
       {children}
       {showContact && <ContactInfo />}
       <Footer />
-      {showContact && <FloatingContactButton />}
     </div>
   );
 };

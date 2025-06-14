@@ -42,12 +42,12 @@ const HeroCV = () => (
         </motion.div>
         
         <motion.div className="mt-8 flex justify-center items-center gap-6" variants={itemVariant}>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={24} /></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Github size={24} /></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="ORCID">
+            <a href="https://linkedin.com/in/johndoe-dev" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={24} /></a>
+            <a href="https://github.com/johndoe-dev" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Github size={24} /></a>
+            <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="ORCID">
               <PenSquare size={24} />
             </a>
-            <a href="mailto:your-email@example.com" className="text-gray-400 hover:text-white transition-colors" aria-label="Email">
+            <a href="mailto:john.doe@email.com" className="text-gray-400 hover:text-white transition-colors" aria-label="Email">
               <Mail size={24} />
             </a>
         </motion.div>

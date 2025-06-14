@@ -1,6 +1,6 @@
+
 import PageLayout from '@/components/PageLayout';
 import SEO from '@/components/SEO';
-import { useEffect } from 'react';
 import {
   HeroCV,
   AboutMe,
@@ -14,14 +14,6 @@ import {
 import { personImg } from '@/lib/constants';
 
 const Index = () => {
-  // Fix any ID conflicts when the page loads
-  useEffect(() => {
-    const contactElements = document.querySelectorAll('[id="contact"]');
-    if (contactElements.length > 1) {
-      // If there are multiple elements with id="contact", rename one
-      contactElements[1].id = 'contact-footer';
-    }
-  }, []);
 
   return (
     <PageLayout>
