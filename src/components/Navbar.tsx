@@ -6,9 +6,19 @@ import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
 
+const navItems = [
+  { id: 'about', label: 'About' },
+  { id: 'education', label: 'Education' },
+  { id: 'work-experience', label: 'Work Experience' },
+  { id: 'research-experience', label: 'Research Experience' },
+  { id: 'portfolio', label: 'Portfolio' },
+  { id: 'skills', label: 'Skills' },
+];
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +27,29 @@ const Navbar = () => {
       } else {
         setIsScrolled(false);
       }
+
+      const scrollPosition = window.scrollY + 160; // Offset for navbar height and a bit more
+      let currentSection = '';
+
+      const sectionIds = [...navItems.map(item => item.id), 'contact', 'hobbies'];
+
+      for (const id of sectionIds) {
+        const element = document.getElementById(id);
+        if (element && element.offsetTop <= scrollPosition) {
+            currentSection = id;
+        }
+      }
+
+      const heroElement = document.querySelector('section');
+      if (heroElement && window.scrollY < heroElement.offsetHeight / 2) {
+        currentSection = '';
+      }
+      
+      setActiveSection(currentSection);
     };
-    window.addEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -36,16 +67,8 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const navItems = [
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'skills', label: 'Skills' },
-    { id: 'education', label: 'Education' },
-    { id: 'portfolio', label: 'Portfolio' },
-  ];
-
   return (
-    <motion.nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full", isScrolled ? "bg-white shadow-sm" : "bg-black/50 backdrop-blur-sm")} initial={{
+    <motion.nav className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full", isScrolled ? "bg-white shadow-sm" : "bg-transparent")} initial={{
       opacity: 1,
       y: 0
     }} animate={{
@@ -62,17 +85,17 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <NavigationMenu className={cn(isScrolled ? "" : "text-white")}>
+            <NavigationMenu>
               <NavigationMenuList className="gap-x-2">
                 {navItems.map((item) => (
                   <NavigationMenuItem key={item.id}>
-                    <button onClick={() => scrollToSection(item.id)} className={cn("px-3 py-2 text-sm font-medium rounded-md", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-200 hover:bg-white/10")}>
+                    <button onClick={() => scrollToSection(item.id)} className={cn("px-3 py-2 text-sm font-medium rounded-md transition-colors", isScrolled ? "text-gray-700 hover:bg-gray-100" : "text-gray-200 hover:bg-white/10", activeSection === item.id && (isScrolled ? "bg-gray-200" : "bg-white/20"))}>
                       {item.label}
                     </button>
                   </NavigationMenuItem>
                 ))}
                 <NavigationMenuItem>
-                  <button onClick={() => scrollToSection('contact')} className={cn("px-4 py-2 rounded-md transition-colors text-sm font-medium", isScrolled ? "bg-gray-800 text-white hover:bg-gray-900" : "bg-white text-black hover:bg-gray-200")}>
+                  <button onClick={() => scrollToSection('contact')} className={cn("px-4 py-2 rounded-md transition-colors text-sm font-medium", isScrolled ? "bg-gray-800 text-white hover:bg-gray-900" : "bg-white text-black hover:bg-gray-200", activeSection === 'contact' && "!bg-primary !text-primary-foreground")}>
                     Contact Me
                   </button>
                 </NavigationMenuItem>
@@ -93,11 +116,11 @@ const Navbar = () => {
       <div className={cn("md:hidden transition-all duration-300 overflow-hidden w-full", isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0")}>
         <div className={cn("px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg", isScrolled ? "bg-white" : "bg-black/80 backdrop-blur-sm")}>
           {navItems.map((item) => (
-            <button key={item.id} onClick={() => scrollToSection(item.id)} className={cn("block w-full text-left px-3 py-2 rounded-md text-base font-medium", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-white/10")}>
+            <button key={item.id} onClick={() => scrollToSection(item.id)} className={cn("block w-full text-left px-3 py-2 rounded-md text-base font-medium", isScrolled ? "text-gray-700 hover:bg-gray-50" : "text-gray-200 hover:bg-white/10", activeSection === item.id && (isScrolled ? "bg-gray-100 font-bold" : ""))}>
               {item.label}
             </button>
           ))}
-          <button onClick={() => scrollToSection('contact')} className={cn("block w-full text-left px-3 py-2 rounded-md text-base font-medium", isScrolled ? "text-gray-700 bg-gray-100 hover:bg-gray-200" : "text-white bg-white/20 hover:bg-white/30")}>
+          <button onClick={() => scrollToSection('contact')} className={cn("block w-full text-left px-3 py-2 rounded-md text-base font-medium", isScrolled ? "text-gray-700 bg-gray-100 hover:bg-gray-200" : "text-white bg-white/20 hover:bg-white/30", activeSection === 'contact' && (isScrolled ? "bg-gray-200 font-bold" : "bg-white/30 font-bold"))}>
             Contact Me
           </button>
         </div>

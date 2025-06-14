@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { sectionVariant, listVariant, itemVariant } from '@/lib/animations';
 
@@ -11,7 +10,7 @@ const skillsData = {
 const Skills = () => (
   <motion.section 
     id="skills" 
-    className="py-20 bg-white"
+    className="py-20 bg-gray-50"
     variants={sectionVariant}
     initial="hidden"
     whileInView="visible"

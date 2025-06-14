@@ -1,4 +1,3 @@
-
 import { GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { sectionVariant, listVariant, itemVariant } from '@/lib/animations';
@@ -21,7 +20,7 @@ const educationData = [
 const Education = () => (
   <motion.section
     id="education"
-    className="py-20 bg-white"
+    className="py-20 bg-gray-50"
     variants={sectionVariant}
     initial="hidden"
     whileInView="visible"

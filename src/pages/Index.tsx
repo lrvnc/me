@@ -5,7 +5,8 @@ import { useEffect } from 'react';
 import {
   HeroCV,
   AboutMe,
-  Experience,
+  WorkExperience,
+  ResearchExperience,
   Skills,
   Education,
   Portfolio,
@@ -33,10 +34,11 @@ const Index = () => {
       />
       <HeroCV />
       <AboutMe />
-      <Experience />
-      <Skills />
       <Education />
+      <WorkExperience />
+      <ResearchExperience />
       <Portfolio />
+      <Skills />
       <Hobbies />
     </PageLayout>
   );

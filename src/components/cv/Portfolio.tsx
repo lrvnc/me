@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
@@ -34,7 +33,7 @@ const portfolioData = [
 const Portfolio = () => (
   <motion.section 
     id="portfolio" 
-    className="py-20 bg-gray-50"
+    className="py-20 bg-white"
     variants={sectionVariant}
     initial="hidden"
     whileInView="visible"
