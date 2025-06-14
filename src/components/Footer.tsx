@@ -1,5 +1,5 @@
 
-import { Linkedin, Github, PenSquare, Mail } from "lucide-react";
+import { Linkedin, Github, PenSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -12,40 +12,33 @@ const Footer = () => {
           A passionate Full Stack Developer building modern, responsive, and user-friendly web applications.
         </p>
 
-        <div className="flex justify-center space-x-4 mb-10">
+        <div className="flex justify-center space-x-6 mb-10">
           <a 
             href="https://linkedin.com/in/johndoe-dev" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-primary hover:text-white"
+            className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
             aria-label="LinkedIn"
           >
-            <Linkedin size={20} />
+            <Linkedin size={24} />
           </a>
           <a 
             href="https://github.com/johndoe-dev" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-primary hover:text-white"
+            className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
             aria-label="GitHub"
           >
-            <Github size={20} />
+            <Github size={24} />
           </a>
           <a 
             href="https://orcid.org/0000-0000-0000-0000" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-primary hover:text-white"
+            className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-gray-700 hover:text-white"
             aria-label="ORCID"
           >
-            <PenSquare size={20} />
-          </a>
-           <a 
-            href="mailto:john.doe@email.com"
-            className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 transition-colors hover:bg-primary hover:text-white"
-            aria-label="Email"
-          >
-            <Mail size={20} />
+            <PenSquare size={24} />
           </a>
         </div>
         
