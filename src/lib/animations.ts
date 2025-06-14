@@ -18,3 +18,13 @@ export const listVariant = {
     }
   }
 };
+
+export const iconVariant = {
+  hidden: { opacity: 0, x: -20, scale: 0.9 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    scale: 1,
+    transition: { duration: 0.4, ease: "easeOut" } 
+  }
+};
