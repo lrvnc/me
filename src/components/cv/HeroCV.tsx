@@ -41,10 +41,10 @@ const HeroCV = () => (
         </motion.p>
         
         <motion.div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4" variants={itemVariant}>
-            <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Button variant="outline" size="lg" className="bg-transparent text-white border-gray-400 hover:bg-white hover:text-black transition-transform duration-300 hover:-translate-y-1" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 <Mail className="mr-2 h-5 w-5" /> Contact Me
             </Button>
-            <Button variant="outline" size="lg" asChild className="bg-transparent text-white border-gray-400 hover:bg-white hover:text-black">
+            <Button variant="outline" size="lg" asChild className="bg-transparent text-white border-gray-400 hover:bg-white hover:text-black transition-transform duration-300 hover:-translate-y-1">
                 <a href="/cv.pdf" download="John_Doe_CV.pdf">
                     <Download className="mr-2 h-5 w-5" /> Download CV
                 </a>
