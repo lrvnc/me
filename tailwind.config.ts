@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -115,7 +114,11 @@ export default {
 				'shimmer': {
 					'0%': { backgroundPosition: '-200% 0' },
 					'100%': { backgroundPosition: '200% 0' }
-				}
+				},
+				'bg-pulse': {
+          '0%, 100%': { opacity: '0.2' },
+          '50%': { opacity: '0.3' },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -126,7 +129,8 @@ export default {
 				'scale-in-out': 'scale-in-out 3s ease-in-out infinite',
 				'rotate-slow': 'rotate-slow 20s linear infinite',
 				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite',
-				'shimmer': 'shimmer 3s linear infinite'
+				'shimmer': 'shimmer 3s linear infinite',
+				'bg-pulse': 'bg-pulse 5s ease-in-out infinite',
 			}
 		}
 	},

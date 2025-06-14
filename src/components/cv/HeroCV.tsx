@@ -4,11 +4,12 @@ import { Download, Mail, Linkedin, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { listVariant, itemVariant } from '@/lib/animations';
 import { placeholderImg } from '@/lib/constants';
+import InstitutionLogos from './InstitutionLogos';
 
 const HeroCV = () => (
   <section className="relative bg-black text-white text-center py-40 px-4 flex items-center justify-center h-screen min-h-[600px]">
     <div className="absolute inset-0 w-full h-full bg-black">
-      <img src={placeholderImg} alt="background" className="w-full h-full object-cover opacity-20" />
+      <img src={placeholderImg} alt="background" className="w-full h-full object-cover opacity-20 animate-bg-pulse" />
     </div>
     <motion.div 
       className="relative z-10"
@@ -36,6 +37,7 @@ const HeroCV = () => (
           <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><Github size={24} /></a>
         </motion.div>
     </motion.div>
+    <InstitutionLogos />
   </section>
 );
 
