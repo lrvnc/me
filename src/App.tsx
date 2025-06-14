@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const App = () => {
   const [queryClient] = useState(() => new QueryClient());
@@ -20,7 +19,6 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
