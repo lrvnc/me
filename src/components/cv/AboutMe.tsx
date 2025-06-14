@@ -21,21 +21,25 @@ const AboutMe = () => {
       variants={sectionVariant}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto flex flex-col items-center">
-          <motion.h2 variants={itemVariant} className="text-3xl font-bold mb-8 text-gray-900 text-center">About Me</motion.h2>
-          
-          <motion.div className="w-full mb-12" variants={itemVariant}>
+        <motion.h2 
+          variants={itemVariant} 
+          className="text-3xl font-bold mb-12 text-gray-900 text-center lg:text-left"
+        >
+          About Me
+        </motion.h2>
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <motion.div className="w-full lg:w-1/2" variants={itemVariant}>
             <ElegantCarousel images={aboutMeImages} />
           </motion.div>
           
-          <motion.div variants={listVariant} className="max-w-3xl text-center">
-            <motion.p variants={itemVariant} className="text-gray-700 leading-relaxed mb-4">
+          <motion.div variants={listVariant} className="w-full lg:w-1/2">
+            <motion.p variants={itemVariant} className="text-gray-700 leading-relaxed mb-4 text-center lg:text-left">
               Hello! I'm John, a passionate Full Stack Developer with a love for creating intuitive and dynamic user experiences. With a background in computer science and several years of hands-on experience, I've had the opportunity to work on exciting projects and collaborate with talented people.
             </motion.p>
-            <motion.p variants={itemVariant} className="text-gray-700 leading-relaxed">
+            <motion.p variants={itemVariant} className="text-gray-700 leading-relaxed text-center lg:text-left">
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.
             </motion.p>
           </motion.div>

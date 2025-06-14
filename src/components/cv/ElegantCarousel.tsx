@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
@@ -101,10 +100,10 @@ export const ElegantCarousel: React.FC<ElegantCarouselProps> = ({ images }) => {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: 'spring', stiffness: 300, damping: 30 },
-            opacity: { duration: 0.2 },
-            filter: { duration: 0.3 },
-            scale: { duration: 0.3 }
+            x: { type: 'spring', stiffness: 250, damping: 35 },
+            opacity: { duration: 0.4 },
+            filter: { duration: 0.4 },
+            scale: { duration: 0.4 }
           }}
           className="absolute w-[60%] h-auto max-h-full object-cover rounded-lg shadow-2xl z-10"
         />
