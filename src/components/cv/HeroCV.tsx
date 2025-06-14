@@ -44,7 +44,7 @@ const HeroCV = () => (
             <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 <Mail className="mr-2 h-5 w-5" /> Contact Me
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="bg-transparent text-white border-gray-400 hover:bg-white hover:text-black">
                 <a href="/cv.pdf" download="John_Doe_CV.pdf">
                     <Download className="mr-2 h-5 w-5" /> Download CV
                 </a>
