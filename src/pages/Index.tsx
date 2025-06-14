@@ -6,7 +6,7 @@ import {
   HeroCV,
   AboutMe,
   WorkExperience,
-  ResearchExperience,
+  Publications,
   Skills,
   Education,
   Portfolio,
@@ -30,13 +30,13 @@ const Index = () => {
         title="John Doe - Full Stack Developer" 
         description="The portfolio of John Doe, a full stack developer specializing in React, Node.js, and modern web technologies."
         imageUrl={personImg}
-        keywords={['full stack developer', 'react', 'nodejs', 'portfolio', 'cv', 'john doe']}
+        keywords={['full stack developer', 'react', 'nodejs', 'portfolio', 'cv', 'john doe', 'publications', 'conferences']}
       />
       <HeroCV />
       <AboutMe />
       <Education />
       <WorkExperience />
-      <ResearchExperience />
+      <Publications />
       <Portfolio />
       <Skills />
       <Hobbies />
