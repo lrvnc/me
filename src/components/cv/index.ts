@@ -6,4 +6,4 @@ export { default as Publications } from './Publications';
 export { default as CertificationsAndSkills } from './CertificationsAndSkills';
 export { default as Education } from './Education';
 export { default as Portfolio } from './Portfolio';
-export { default as Hobbies } from './Hobbies';
+export { default as ProfessionalDevelopment } from './ProfessionalDevelopment';
