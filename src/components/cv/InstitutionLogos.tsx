@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import LogoPlaceholder from './LogoPlaceholder';
 
 const institutions = [
   'UFSCAR',
@@ -28,7 +29,7 @@ const InstitutionLogos = () => {
         >
           {marqueeInstitutions.map((name, index) => (
             <div key={index} className="flex-shrink-0 flex items-center justify-center mx-10" style={{ minWidth: '180px' }}>
-              <span className="text-xl font-medium text-gray-300 hover:text-white transition-colors cursor-default">{name}</span>
+              <LogoPlaceholder name={name} className="h-12 w-32 text-2xl" />
             </div>
           ))}
         </motion.div>

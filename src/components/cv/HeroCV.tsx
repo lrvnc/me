@@ -10,7 +10,7 @@ import Typewriter from './Typewriter';
 const HeroCV = () => (
   <section className="relative bg-black text-white py-40 px-4 flex items-center h-screen min-h-[600px]">
     <div className="absolute inset-0 w-full h-full bg-black">
-      <img src={placeholderImg} alt="background" className="w-full h-full object-cover opacity-20" />
+      <img src={placeholderImg} alt="background" className="w-full h-full object-cover opacity-20 animate-bg-pulse" />
     </div>
     <div className="relative z-10 container mx-auto">
       <motion.div
