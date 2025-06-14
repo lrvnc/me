@@ -5,11 +5,12 @@ import { motion } from 'framer-motion';
 import { listVariant, itemVariant } from '@/lib/animations';
 import { placeholderImg, personImg } from '@/lib/constants';
 import InstitutionLogos from './InstitutionLogos';
+import Typewriter from './Typewriter';
 
 const HeroCV = () => (
   <section className="relative bg-black text-white py-40 px-4 flex items-center h-screen min-h-[600px]">
     <div className="absolute inset-0 w-full h-full bg-black">
-      <img src={placeholderImg} alt="background" className="w-full h-full object-cover opacity-20 animate-bg-pulse" />
+      <img src={placeholderImg} alt="background" className="w-full h-full object-cover opacity-20" />
     </div>
     <div className="relative z-10 container mx-auto">
       <motion.div
@@ -26,8 +27,17 @@ const HeroCV = () => (
         
         <motion.h1 className="text-4xl md:text-6xl font-bold" variants={itemVariant}>John Doe</motion.h1>
         <motion.p className="text-xl md:text-2xl mt-4 text-gray-300" variants={itemVariant}>Full Stack Developer & Tech Enthusiast</motion.p>
-        <motion.p className="mt-4 max-w-xl mx-auto text-gray-400" variants={itemVariant}>
-            I build beautiful, functional, and user-centric web applications.
+
+        <motion.p className="mt-4 max-w-xl mx-auto text-gray-400 min-h-[4rem] flex items-center justify-center text-center" variants={itemVariant}>
+          <Typewriter 
+            phrases={[
+              "I build beautiful, functional, and user-centric web applications.",
+              "A React enthusiast at heart.",
+              "Passionate about TypeScript.",
+              "Specializing in Node.js & GraphQL.",
+              "Driven by creative problem-solving."
+            ]} 
+          />
         </motion.p>
         
         <motion.div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4" variants={itemVariant}>

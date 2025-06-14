@@ -14,7 +14,6 @@ const InstitutionLogos = () => {
   
   return (
     <div className="absolute bottom-8 left-0 w-full py-4">
-      <p className="text-center text-sm text-gray-400 tracking-widest uppercase mb-6">Studied At & Collaborated With</p>
       <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:w-24 before:h-full before:bg-gradient-to-r before:from-black before:to-transparent before:z-10 after:absolute after:right-0 after:top-0 after:w-24 after:h-full after:bg-gradient-to-l after:from-black after:to-transparent after:z-10">
         <motion.div
           className="flex"

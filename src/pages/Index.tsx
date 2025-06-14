@@ -9,7 +9,6 @@ import {
   CertificationsAndSkills,
   Education,
   Portfolio,
-  ProfessionalDevelopment,
 } from '@/components/cv';
 import { personImg } from '@/lib/constants';
 
@@ -30,7 +29,6 @@ const Index = () => {
       <Publications />
       <Portfolio />
       <CertificationsAndSkills />
-      <ProfessionalDevelopment />
     </PageLayout>
   );
 };
