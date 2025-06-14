@@ -43,10 +43,10 @@ const WorkExperience = () => (
           viewport={{ once: true, amount: 0.2 }}
         >
           {workExperienceData.map((job, index) => (
-            <motion.div key={index} className="mb-10 ml-6" variants={itemVariant}>
+            <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
               <motion.span 
                 variants={iconVariant}
-                className="absolute flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full -left-3 ring-8 ring-white">
+                className="absolute flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full -left-9 ring-8 ring-white">
                 <Briefcase className="w-3 h-3 text-white" />
               </motion.span>
               <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{job.role} at <span className="text-gray-600 ml-2">{job.company}</span></h3>
