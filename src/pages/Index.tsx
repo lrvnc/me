@@ -98,19 +98,22 @@ const experienceData = {
       role: "Senior Frontend Developer",
       company: "Tech Solutions Inc.",
       period: "2022 - Present",
-      description: "Leading the development of a new client-facing dashboard using React and TypeScript. Improved application performance by 30%."
+      description: "Leading the development of a new client-facing dashboard using React and TypeScript. Improved application performance by 30%.",
+      logo: "/lovable-uploads/e502f601-c519-43a8-86f5-5fa89ae50d2f.png", // Example company logo
     },
     {
       role: "Full Stack Developer",
       company: "Innovate Co.",
       period: "2020 - 2022",
-      description: "Developed and maintained web applications using the MERN stack. Collaborated with a team of 5 developers on various projects."
+      description: "Developed and maintained web applications using the MERN stack. Collaborated with a team of 5 developers on various projects.",
+      logo: "/lovable-uploads/927dae7e-6aaf-4b76-add2-1287a1dd9dc0.png",
     },
     {
       role: "Junior Developer",
       company: "Web Crafters",
       period: "2019 - 2020",
-      description: "Assisted in building and testing responsive websites for various clients using HTML, CSS, and JavaScript, laying a strong foundation in web technologies."
+      description: "Assisted in building and testing responsive websites for various clients using HTML, CSS, and JavaScript, laying a strong foundation in web technologies.",
+      logo: "", // No logo fallback
     },
   ],
   research: [
@@ -118,7 +121,8 @@ const experienceData = {
       role: "Research Assistant",
       company: "Stanford AI Lab",
       period: "2018 - 2019",
-      description: "Contributed to a project on machine learning models for natural language understanding. Co-authored a conference paper."
+      description: "Contributed to a project on machine learning models for natural language understanding. Co-authored a conference paper.",
+      logo: "/lovable-uploads/93ab0638-8190-4ccf-897f-21fda7f4f5ad.png"
     }
   ]
 };
@@ -144,9 +148,13 @@ const Experience = () => (
           viewport={{ once: true, amount: 0.2 }}
         >
           {experienceData.work.map((job, index) => (
-            <motion.div key={index} className="mb-10 ml-6" variants={itemVariant}>
-              <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full -left-3 ring-8 ring-white">
-                <Briefcase className="w-3 h-3 text-white" />
+            <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
+              <span className="absolute flex items-center justify-center w-8 h-8 bg-white border-2 border-gray-200 rounded-full -left-5 top-1 ring-8 ring-white z-10">
+                {job.logo ? (
+                  <img src={job.logo} alt={`${job.company} logo`} className="w-6 h-6 object-contain" />
+                ) : (
+                  <span className="w-3 h-3 bg-gray-400 rounded-full" />
+                )}
               </span>
               <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{job.role} at <span className="text-gray-600 ml-2">{job.company}</span></h3>
               <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{job.period}</time>
@@ -164,9 +172,13 @@ const Experience = () => (
           viewport={{ once: true, amount: 0.2 }}
         >
           {experienceData.research.map((job, index) => (
-            <motion.div key={index} className="mb-10 ml-6" variants={itemVariant}>
-              <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full -left-3 ring-8 ring-white">
-                <Briefcase className="w-3 h-3 text-white" />
+            <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
+              <span className="absolute flex items-center justify-center w-8 h-8 bg-white border-2 border-gray-200 rounded-full -left-5 top-1 ring-8 ring-white z-10">
+                {job.logo ? (
+                  <img src={job.logo} alt={`${job.company} logo`} className="w-6 h-6 object-contain" />
+                ) : (
+                  <span className="w-3 h-3 bg-gray-400 rounded-full" />
+                )}
               </span>
               <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{job.role} at <span className="text-gray-600 ml-2">{job.company}</span></h3>
               <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{job.period}</time>
@@ -231,13 +243,15 @@ const educationData = [
     degree: "M.S. in Computer Science",
     university: "Stanford University",
     period: "2017 - 2019",
-    description: "Focused on Artificial Intelligence and Human-Computer Interaction. Published a paper on novel UI paradigms."
+    description: "Focused on Artificial Intelligence and Human-Computer Interaction. Published a paper on novel UI paradigms.",
+    logo: "/lovable-uploads/af5ee2ce-3942-48bb-a2ad-3b49b419daf9.png"
   },
   {
     degree: "B.S. in Software Engineering",
     university: "University of Waterloo",
     period: "2013 - 2017",
-    description: "Graduated with honors. Active member of the coding club and participated in several hackathons."
+    description: "Graduated with honors. Active member of the coding club and participated in several hackathons.",
+    logo: "/lovable-uploads/a9bb9110-964a-43b0-a5ab-7162140cd133.png"
   },
 ];
 
@@ -260,9 +274,13 @@ const Education = () => (
         viewport={{ once: true, amount: 0.2 }}
       >
         {educationData.map((edu, index) => (
-          <motion.div key={index} className="mb-10 ml-6" variants={itemVariant}>
-            <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-800 rounded-full -left-3 ring-8 ring-white">
-              <GraduationCap className="w-3 h-3 text-white" />
+          <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
+            <span className="absolute flex items-center justify-center w-8 h-8 bg-white border-2 border-gray-200 rounded-full -left-5 top-1 ring-8 ring-white z-10">
+              {edu.logo ? (
+                <img src={edu.logo} alt={`${edu.university} logo`} className="w-6 h-6 object-contain" />
+              ) : (
+                <span className="w-3 h-3 bg-gray-400 rounded-full" />
+              )}
             </span>
             <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{edu.degree}</h3>
             <p className="text-gray-600 mb-1">{edu.university}</p>
