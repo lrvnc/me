@@ -11,7 +11,7 @@ const navItems = [
   { id: 'work-experience', label: 'Work Experience' },
   { id: 'publications', label: 'Publications' },
   { id: 'portfolio', label: 'Portfolio' },
-  { id: 'skills', label: 'Skills' },
+  { id: 'certifications', label: 'Certifications' },
 ];
 
 const Navbar = () => {

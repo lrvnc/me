@@ -1,4 +1,3 @@
-
 import PageLayout from '@/components/PageLayout';
 import SEO from '@/components/SEO';
 import { useEffect } from 'react';
@@ -7,7 +6,7 @@ import {
   AboutMe,
   WorkExperience,
   Publications,
-  Skills,
+  CertificationsAndSkills,
   Education,
   Portfolio,
   Hobbies,
@@ -38,7 +37,7 @@ const Index = () => {
       <WorkExperience />
       <Publications />
       <Portfolio />
-      <Skills />
+      <CertificationsAndSkills />
       <Hobbies />
     </PageLayout>
   );
