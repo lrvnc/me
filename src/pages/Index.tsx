@@ -99,21 +99,18 @@ const experienceData = {
       company: "Tech Solutions Inc.",
       period: "2022 - Present",
       description: "Leading the development of a new client-facing dashboard using React and TypeScript. Improved application performance by 30%.",
-      logo: "/lovable-uploads/e502f601-c519-43a8-86f5-5fa89ae50d2f.png", // Example company logo
     },
     {
       role: "Full Stack Developer",
       company: "Innovate Co.",
       period: "2020 - 2022",
       description: "Developed and maintained web applications using the MERN stack. Collaborated with a team of 5 developers on various projects.",
-      logo: "/lovable-uploads/927dae7e-6aaf-4b76-add2-1287a1dd9dc0.png",
     },
     {
       role: "Junior Developer",
       company: "Web Crafters",
       period: "2019 - 2020",
       description: "Assisted in building and testing responsive websites for various clients using HTML, CSS, and JavaScript, laying a strong foundation in web technologies.",
-      logo: "", // No logo fallback
     },
   ],
   research: [
@@ -122,7 +119,6 @@ const experienceData = {
       company: "Stanford AI Lab",
       period: "2018 - 2019",
       description: "Contributed to a project on machine learning models for natural language understanding. Co-authored a conference paper.",
-      logo: "/lovable-uploads/93ab0638-8190-4ccf-897f-21fda7f4f5ad.png"
     }
   ]
 };
@@ -149,12 +145,8 @@ const Experience = () => (
         >
           {experienceData.work.map((job, index) => (
             <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
-              <span className="absolute flex items-center justify-center w-8 h-8 bg-white border-2 border-gray-200 rounded-full -left-5 top-1 ring-8 ring-white z-10">
-                {job.logo ? (
-                  <img src={job.logo} alt={`${job.company} logo`} className="w-6 h-6 object-contain" />
-                ) : (
-                  <span className="w-3 h-3 bg-gray-400 rounded-full" />
-                )}
+              <span className="absolute flex items-center justify-center w-8 h-8 bg-primary/10 rounded-full -left-4 ring-4 ring-white">
+                <Briefcase className="w-4 h-4 text-primary" />
               </span>
               <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{job.role} at <span className="text-gray-600 ml-2">{job.company}</span></h3>
               <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{job.period}</time>
@@ -173,12 +165,8 @@ const Experience = () => (
         >
           {experienceData.research.map((job, index) => (
             <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
-              <span className="absolute flex items-center justify-center w-8 h-8 bg-white border-2 border-gray-200 rounded-full -left-5 top-1 ring-8 ring-white z-10">
-                {job.logo ? (
-                  <img src={job.logo} alt={`${job.company} logo`} className="w-6 h-6 object-contain" />
-                ) : (
-                  <span className="w-3 h-3 bg-gray-400 rounded-full" />
-                )}
+              <span className="absolute flex items-center justify-center w-8 h-8 bg-primary/10 rounded-full -left-4 ring-4 ring-white">
+                <BookOpen className="w-4 h-4 text-primary" />
               </span>
               <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{job.role} at <span className="text-gray-600 ml-2">{job.company}</span></h3>
               <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{job.period}</time>
@@ -244,14 +232,12 @@ const educationData = [
     university: "Stanford University",
     period: "2017 - 2019",
     description: "Focused on Artificial Intelligence and Human-Computer Interaction. Published a paper on novel UI paradigms.",
-    logo: "/lovable-uploads/af5ee2ce-3942-48bb-a2ad-3b49b419daf9.png"
   },
   {
     degree: "B.S. in Software Engineering",
     university: "University of Waterloo",
     period: "2013 - 2017",
     description: "Graduated with honors. Active member of the coding club and participated in several hackathons.",
-    logo: "/lovable-uploads/a9bb9110-964a-43b0-a5ab-7162140cd133.png"
   },
 ];
 
@@ -275,12 +261,8 @@ const Education = () => (
       >
         {educationData.map((edu, index) => (
           <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
-            <span className="absolute flex items-center justify-center w-8 h-8 bg-white border-2 border-gray-200 rounded-full -left-5 top-1 ring-8 ring-white z-10">
-              {edu.logo ? (
-                <img src={edu.logo} alt={`${edu.university} logo`} className="w-6 h-6 object-contain" />
-              ) : (
-                <span className="w-3 h-3 bg-gray-400 rounded-full" />
-              )}
+            <span className="absolute flex items-center justify-center w-8 h-8 bg-primary/10 rounded-full -left-4 ring-4 ring-white">
+                <GraduationCap className="w-4 h-4 text-primary" />
             </span>
             <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{edu.degree}</h3>
             <p className="text-gray-600 mb-1">{edu.university}</p>
@@ -363,7 +345,62 @@ const Portfolio = () => (
   </motion.section>
 );
 
-// Update the hobbiesData array to use "Icon" (uppercase) per React best practices
+const publicationsData = [
+  {
+    title: "A Novel Approach to User Interface Design",
+    venue: "ACM CHI Conference on Human Factors in Computing Systems",
+    period: "April 2019",
+    description: "Presented our paper on creating more intuitive UIs through adaptive layouts. Received positive feedback from peers.",
+    url: "#"
+  },
+  {
+    title: "Scalable Backend Architectures for Real-Time Applications",
+    venue: "WebDev Summit 2021",
+    period: "October 2021",
+    description: "Invited talk on best practices for building robust and scalable backends using Node.js and microservices.",
+    url: "#"
+  }
+];
+
+const Publications = () => (
+  <motion.section
+    id="publications"
+    className="py-20 bg-gray-50"
+    variants={sectionVariant}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <div className="container mx-auto px-4">
+      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Publications & Conferences</h2>
+      <motion.div
+        className="max-w-3xl mx-auto relative border-l-2 border-gray-200"
+        variants={listVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {publicationsData.map((pub, index) => (
+          <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
+            <span className="absolute flex items-center justify-center w-8 h-8 bg-primary/10 rounded-full -left-4 ring-4 ring-white">
+              <BookOpen className="w-4 h-4 text-primary" />
+            </span>
+            <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{pub.title}</h3>
+            <p className="text-gray-600 mb-1">{pub.venue}</p>
+            <time className="block mb-2 text-sm font-normal leading-none text-gray-400">{pub.period}</time>
+            <p className="text-base font-normal text-gray-600 mb-4">{pub.description}</p>
+            <Button variant="link" asChild className="p-0 h-auto font-medium text-primary hover:underline">
+                <a href={pub.url} target="_blank" rel="noopener noreferrer">
+                    View Details
+                </a>
+            </Button>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  </motion.section>
+);
+
 const hobbiesData = [
   { name: "Coding Pet Projects", Icon: Code },
   { name: "Reading Tech Blogs", Icon: BookOpen },
@@ -428,6 +465,7 @@ const Index = () => {
       <Skills />
       <Education />
       <Portfolio />
+      <Publications />
       <Hobbies />
     </PageLayout>
   );
