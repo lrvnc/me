@@ -26,7 +26,7 @@ const HeroCV = () => (
         </motion.div>
         
         <motion.h1 className="text-4xl md:text-6xl font-bold" variants={itemVariant}>Leandro Risso Venâncio</motion.h1>
-        <motion.p className="text-xl md:text-2xl mt-4 text-gray-300" variants={itemVariant}>PhD Student ~ MSc in Engineering ~ BSc in Physics Engineering</motion.p>
+        <motion.p className="text-xl md:text-2xl mt-4 text-gray-300" variants={itemVariant}>Join PhD Student at QUEX Program</motion.p>
 
         <motion.p className="mt-4 max-w-xl mx-auto text-gray-400 min-h-[4rem] flex items-center justify-center text-center" variants={itemVariant}>
           <Typewriter 
