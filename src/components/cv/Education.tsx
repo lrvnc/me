@@ -9,22 +9,22 @@ import { cn } from '@/lib/utils';
 const educationData = [
   {
     degree: "Joint PhD in Physics",
-    university: "University of Exeter",
-    period: "2021 - Present",
-    description: "Research focused on Optical Computing and Neuromorphic Photonics. In partnership with the University of Queensland."
+    university: "University of Queensland & University of Exeter",
+    period: "Jan 2025 - Present",
+    description: "Thesis: Machine learning with optical wave propagation in disordered media."
   },
   {
-    degree: "MSc in Engineering",
-    university: "ESPCI Paris",
-    period: "2018 - 2021",
-    description: "Specialized in physics, with a focus on optics and materials science. Research stay at MIT."
+    degree: "M.Sc. in Engineering",
+    university: "ESPCI Paris - PSL",
+    period: "Aug 2021 - Aug 2023",
+    description: "Specialization in physics, with emphasis on computer science, quantum computing, and optics."
   },
   {
-    degree: "BSc in Physics Engineering",
-    university: "UFSCAR",
-    period: "2013 - 2018",
-    description: "Graduated with honors. Project on developing educational tools for physics."
-  },
+    degree: "B.Sc. in Physics Engineering",
+    university: "Federal University of São Carlos (UFSCar)",
+    period: "Mar 2018 - Nov 2024",
+    description: ""
+  }
 ];
 
 const Education = () => (
