@@ -9,7 +9,7 @@ export const logoMap: { [key: string]: { src: string; className?: string } } = {
   'University of Queensland': { src: '/logos/UQlogo.png', className: 'h-20' },
 };
 
-// Country flags for education section
+// Country flags for education section.
 export const countryFlags = {
   'Federal University of São Carlos (UFSCar)': {
     country: 'Brazil',
