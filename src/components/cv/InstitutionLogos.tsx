@@ -33,14 +33,12 @@ const InstitutionLogos = () => {
             return (
               <div key={index} className="flex-shrink-0 flex items-center justify-center mx-10" style={{ minWidth: '180px' }}>
                 {logoSrc ? (
-                  <div className="bg-white/95 p-2 rounded-lg flex items-center justify-center h-20 w-40">
-                    <img 
-                      src={logoSrc} 
-                      alt={`${name} logo`} 
-                      title={name}
-                      className="max-h-full max-w-full object-contain" 
-                    />
-                  </div>
+                  <img 
+                    src={logoSrc} 
+                    alt={`${name} logo`} 
+                    title={name}
+                    className="h-16 object-contain brightness-0 invert" 
+                  />
                 ) : (
                   <LogoPlaceholder name={name} className="h-12 w-32 text-2xl" />
                 )}
