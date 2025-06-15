@@ -18,7 +18,7 @@ const InstitutionLogos = () => {
     <div className="absolute bottom-8 left-0 w-full py-4">
       <div className="relative w-full overflow-hidden before:absolute before:left-0 before:top-0 before:w-24 before:h-full before:bg-gradient-to-r before:from-black before:to-transparent before:z-10 after:absolute after:right-0 after:top-0 after:w-24 after:h-full after:bg-gradient-to-l after:from-black after:to-transparent after:z-10">
         <motion.div
-          className="flex"
+          className="flex items-center"
           animate={{
             x: ['0%', '-100%'],
             transition: {
@@ -33,12 +33,14 @@ const InstitutionLogos = () => {
             return (
               <div key={index} className="flex-shrink-0 flex items-center justify-center mx-10" style={{ minWidth: '180px' }}>
                 {logoSrc ? (
-                  <img 
-                    src={logoSrc} 
-                    alt={`${name} logo`} 
-                    title={name}
-                    className="h-12 object-contain w-auto max-w-[150px] brightness-0 invert" 
-                  />
+                  <div className="bg-white/95 p-2 rounded-lg flex items-center justify-center h-20 w-40">
+                    <img 
+                      src={logoSrc} 
+                      alt={`${name} logo`} 
+                      title={name}
+                      className="max-h-full max-w-full object-contain" 
+                    />
+                  </div>
                 ) : (
                   <LogoPlaceholder name={name} className="h-12 w-32 text-2xl" />
                 )}

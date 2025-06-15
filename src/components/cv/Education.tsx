@@ -56,7 +56,7 @@ const Education = () => (
               <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{edu.degree}</h3>
               <div className="flex items-center gap-2 mb-1">
                 {logoSrc ? (
-                  <img src={logoSrc} alt={`${edu.university} logo`} className="w-8 h-8 object-contain" />
+                  <img src={logoSrc} alt={`${edu.university} logo`} className="h-8 w-auto max-w-[6rem] object-contain" />
                 ) : (
                   <LogoPlaceholder name={edu.university} className="w-8 h-8 text-xs bg-gray-200 text-gray-700 border-none rounded-full" />
                 )}
