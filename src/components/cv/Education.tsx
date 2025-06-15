@@ -57,7 +57,6 @@ const Education = () => (
                 {flagData ? (
                   <div className="flex items-center gap-2">
                     {Array.isArray(flagData.flag) ? (
-                      // Se houver múltiplas bandeiras (ex: ['au.svg', 'gb.svg'])
                       flagData.flag.map((flagUrl, index) => (
                         <img
                           key={index}
