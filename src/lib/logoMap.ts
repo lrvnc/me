@@ -10,3 +10,10 @@ export const logoMap: { [key: string]: { src: string; className?: string } } = {
   'Stanford University': { src: '' },
   'University of Waterloo': { src: '' },
 };
+
+// Country flags for education section
+export const countryFlags: { [key: string]: { country: string; flag: string; className?: string } } = {
+  'Federal University of São Carlos (UFSCar)': { country: 'Brazil', flag: '🇧🇷', className: 'text-2xl' },
+  'ESPCI Paris - PSL': { country: 'France', flag: '🇫🇷', className: 'text-2xl' },
+  'University of Queensland & University of Exeter': { country: 'Australia & UK', flag: '🇦🇺🇬🇧', className: 'text-2xl' },
+};
