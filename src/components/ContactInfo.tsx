@@ -39,11 +39,11 @@ const ContactInfo = () => {
               <CardContent className="p-8">
                 <div className="flex flex-col items-center gap-6 text-center">
                   <Avatar className="w-24 h-24 border-4 border-gray-700 flex-shrink-0 shadow-lg">
-                    <AvatarImage src={personImg} alt="John Doe" />
+                    <AvatarImage src={personImg} alt="Leandro Risso Venâncio" />
                     <AvatarFallback>JD</AvatarFallback>
                   </Avatar>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">John Doe</h3>
+                    <h3 className="text-2xl font-bold text-white">Leandro Risso Venâncio</h3>
                     <a href="mailto:john.doe@email.com" className="inline-flex items-center text-gray-300 hover:text-white transition-colors text-md mt-1">
                       <Mail className="w-5 h-5 mr-2" />
                       <span>john.doe@email.com</span>

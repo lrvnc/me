@@ -21,11 +21,11 @@ const HeroCV = () => (
       >
         <motion.div variants={itemVariant} className="mb-6">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gray-700 shadow-lg">
-                <img src={personImg} alt="John Doe" className="w-full h-full object-cover" />
+                <img src={personImg} alt="Leandro Risso Venâncio" className="w-full h-full object-cover" />
             </div>
         </motion.div>
         
-        <motion.h1 className="text-4xl md:text-6xl font-bold" variants={itemVariant}>John Doe</motion.h1>
+        <motion.h1 className="text-4xl md:text-6xl font-bold" variants={itemVariant}>Leandro Risso Venâncio</motion.h1>
         <motion.p className="text-xl md:text-2xl mt-4 text-gray-300" variants={itemVariant}>Full Stack Developer & Tech Enthusiast</motion.p>
 
         <motion.p className="mt-4 max-w-xl mx-auto text-gray-400 min-h-[4rem] flex items-center justify-center text-center" variants={itemVariant}>

@@ -79,7 +79,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center text-xl font-bold">
-              <span className={cn(isScrolled ? "text-gray-800" : "text-white")}>John Doe</span>
+              <span className={cn(isScrolled ? "text-gray-800" : "text-white")}>Leandro Risso Venâncio</span>
             </Link>
           </div>
           

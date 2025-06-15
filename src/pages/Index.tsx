@@ -1,6 +1,5 @@
-
-import PageLayout from '@/components/PageLayout';
-import SEO from '@/components/SEO';
+import PageLayout from "@/components/PageLayout";
+import SEO from "@/components/SEO";
 import {
   HeroCV,
   AboutMe,
@@ -9,18 +8,24 @@ import {
   CertificationsAndSkills,
   Education,
   Portfolio,
-} from '@/components/cv';
-import { personImg } from '@/lib/constants';
+} from "@/components/cv";
+import { personImg } from "@/lib/constants";
 
 const Index = () => {
-
   return (
     <PageLayout>
-      <SEO 
-        title="John Doe - Full Stack Developer" 
-        description="The portfolio of John Doe, a full stack developer specializing in React, Node.js, and modern web technologies."
+      <SEO
+        title="Leandro Risso Venâncio - Joint PhD Student in Physics and Computer Science"
+        description="Leandro Venâncio personal webpage."
         imageUrl={personImg}
-        keywords={['full stack developer', 'react', 'nodejs', 'portfolio', 'cv', 'john doe', 'publications', 'conferences']}
+        keywords={[
+          "PhD Student",
+          "MSc in Engineering",
+          "BSc in Physics Engineering",
+          "Portfolio",
+          "CV",
+          "Leandro Venâncio",
+        ]}
       />
       <HeroCV />
       <AboutMe />

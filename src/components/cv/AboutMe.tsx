@@ -5,7 +5,7 @@ import { ElegantCarousel } from './ElegantCarousel';
 
 // You can add more images here for the gallery. I've used the existing ones as a starting point.
 const aboutMeImages = [
-  { src: personImg, alt: 'John Doe portrait' },
+  { src: personImg, alt: 'Leandro Risso Venâncio portrait' },
   { src: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7', alt: 'Woman using a laptop on a bed' },
   { src: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b', alt: 'Person holding a blue light bulb' },
   { src: placeholderImg, alt: 'A placeholder image representing a workspace' },
