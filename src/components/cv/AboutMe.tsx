@@ -1,14 +1,13 @@
 import { motion } from 'framer-motion';
 import { sectionVariant, itemVariant, listVariant } from '@/lib/animations';
-import { personImg, placeholderImg } from '@/lib/constants';
 import { ElegantCarousel } from './ElegantCarousel';
 
 // You can add more images here for the gallery. I've used the existing ones as a starting point.
 const aboutMeImages = [
-  { src: personImg, alt: 'Leandro Risso Venâncio portrait' },
-  { src: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7', alt: 'Woman using a laptop on a bed' },
-  { src: 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b', alt: 'Person holding a blue light bulb' },
-  { src: placeholderImg, alt: 'A placeholder image representing a workspace' },
+  { src: '/imgs/mit1-zoom.jpg', alt: 'Me at MIT - 2023' },
+  { src: '/imgs/espci2-zoom.jpg', alt: 'My graduation at ESPCI - 2025' },
+  { src: '/imgs/espci3.jpg', alt: 'My graduation at ESPCI - 2025' },
+  { src: '/imgs/trip1.jpg', alt: 'Trip in UK - 2025' },
 ];
 
 const AboutMe = () => {
@@ -35,10 +34,10 @@ const AboutMe = () => {
               About Me
             </motion.h2>
             <motion.p variants={itemVariant} className="text-gray-700 leading-relaxed mb-4 text-center lg:text-left">
-              Hello! I'm John, a passionate Full Stack Developer with a love for creating intuitive and dynamic user experiences. With a background in computer science and several years of hands-on experience, I've had the opportunity to work on exciting projects and collaborate with talented people.
+              Hi, and welcome to my personal page! I'm Leandro, originally from Limeira — a not-so-small city in the countryside of São Paulo, Brazil. I'm currently a PhD student in the QUEX joint program, working at the intersection of Physics and Computer Science. My research lies in the multidisciplinary field of Optical Computing, where I explore how light can be harnessed to perform machine learning tasks, accelerate processing, reduce energy consumption during training and inference, and more.
             </motion.p>
             <motion.p variants={itemVariant} className="text-gray-700 leading-relaxed text-center lg:text-left">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee.
+              I love traveling and discovering new places. But more than that, I value the connections made along the way — it's the people who make the journey meaningful. Feel free to reach out if you'd like to connect, collaborate, or just have a good chat!
             </motion.p>
           </motion.div>
         </div>
