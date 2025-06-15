@@ -26,16 +26,15 @@ const HeroCV = () => (
         </motion.div>
         
         <motion.h1 className="text-4xl md:text-6xl font-bold" variants={itemVariant}>Leandro Risso Venâncio</motion.h1>
-        <motion.p className="text-xl md:text-2xl mt-4 text-gray-300" variants={itemVariant}>Full Stack Developer & Tech Enthusiast</motion.p>
+        <motion.p className="text-xl md:text-2xl mt-4 text-gray-300" variants={itemVariant}>PhD Student ~ MSc in Engineering ~ BSc in Physics Engineering</motion.p>
 
         <motion.p className="mt-4 max-w-xl mx-auto text-gray-400 min-h-[4rem] flex items-center justify-center text-center" variants={itemVariant}>
           <Typewriter 
             phrases={[
-              "I build beautiful, functional, and user-centric web applications.",
-              "A React enthusiast at heart.",
-              "Passionate about TypeScript.",
-              "Specializing in Node.js & GraphQL.",
-              "Driven by creative problem-solving."
+              "Optical Computing.",
+              "Machine Learning.",
+              "Physics & Education",
+              "Powered by coffee and unanswered questions."
             ]} 
           />
         </motion.p>
