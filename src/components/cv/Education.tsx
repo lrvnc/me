@@ -56,7 +56,23 @@ const Education = () => (
               <div className="flex items-center gap-2 mb-1">
                 {flagData ? (
                   <div className="flex items-center gap-2">
-                    <span className={flagData.className || 'text-2xl'}>{flagData.flag}</span>
+                    {Array.isArray(flagData.flag) ? (
+                      // Se houver múltiplas bandeiras (ex: ['au.svg', 'gb.svg'])
+                      flagData.flag.map((flagUrl, index) => (
+                        <img
+                          key={index}
+                          src={flagUrl}
+                          alt={`Flag ${index}`}
+                          className={flagData.className || 'w-6 h-auto'}
+                        />
+                      ))
+                    ) : (
+                      <img
+                        src={flagData.flag}
+                        alt={`${flagData.country} Flag`}
+                        className={flagData.className || 'w-6 h-auto'}
+                      />
+                    )}
                     <span className="text-sm text-gray-500">{flagData.country}</span>
                   </div>
                 ) : (
