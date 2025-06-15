@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { sectionVariant, listVariant, itemVariant, iconVariant } from '@/lib/animations';
 import LogoPlaceholder from './LogoPlaceholder';
 import { logoMap } from '@/lib/logoMap';
+import { cn } from '@/lib/utils';
 
 const educationData = [
   {
@@ -45,7 +46,7 @@ const Education = () => (
         viewport={{ once: true, amount: 0.2 }}
       >
         {educationData.map((edu, index) => {
-          const logoSrc = logoMap[edu.university];
+          const logoData = logoMap[edu.university];
           return (
             <motion.div key={index} className="mb-10 ml-6 relative" variants={itemVariant}>
               <motion.span 
@@ -55,8 +56,8 @@ const Education = () => (
               </motion.span>
               <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-900">{edu.degree}</h3>
               <div className="flex items-center gap-2 mb-1">
-                {logoSrc ? (
-                  <img src={logoSrc} alt={`${edu.university} logo`} className="h-8 w-auto max-w-[6rem] object-contain" />
+                {logoData && logoData.src ? (
+                  <img src={logoData.src} alt={`${edu.university} logo`} className={cn("w-auto max-w-[6rem] object-contain", logoData.className || 'h-8')} />
                 ) : (
                   <LogoPlaceholder name={edu.university} className="w-8 h-8 text-xs bg-gray-200 text-gray-700 border-none rounded-full" />
                 )}

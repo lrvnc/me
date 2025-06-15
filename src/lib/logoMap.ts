@@ -1,10 +1,12 @@
 
-export const logoMap: { [key: string]: string } = {
-  'UFSCAR': '/logos/UFSCar.svg',
-  'ESPCI Paris': '/logos/espci.png',
-  'MIT': '/logos/mit.svg',
-  'University of Exeter': '/logos/uoe.png',
-  'University of Queensland': '/logos/UQlogo.png',
-  'Stanford University': '',
-  'University of Waterloo': '',
+// To adjust logo sizes, you can change the `className` for each entry.
+// For example, you can use Tailwind CSS height classes like 'h-10', 'h-12', 'h-16', etc.
+export const logoMap: { [key: string]: { src: string; className?: string } } = {
+  'UFSCAR': { src: '/logos/UFSCar.svg', className: 'h-16' },
+  'ESPCI Paris': { src: '/logos/espci.png', className: 'h-10' },
+  'MIT': { src: '/logos/mit.svg', className: 'h-8' },
+  'University of Exeter': { src: '/logos/uoe.png', className: 'h-12' },
+  'University of Queensland': { src: '/logos/UQlogo.png', className: 'h-14' },
+  'Stanford University': { src: '' },
+  'University of Waterloo': { src: '' },
 };

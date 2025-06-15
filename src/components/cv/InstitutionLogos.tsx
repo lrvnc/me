@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import LogoPlaceholder from './LogoPlaceholder';
 import { logoMap } from '@/lib/logoMap';
+import { cn } from '@/lib/utils';
 
 const institutions = [
   'UFSCAR',
@@ -29,15 +30,15 @@ const InstitutionLogos = () => {
           }}
         >
           {marqueeInstitutions.map((name, index) => {
-            const logoSrc = logoMap[name];
+            const logoData = logoMap[name];
             return (
               <div key={index} className="flex-shrink-0 flex items-center justify-center mx-10" style={{ minWidth: '180px' }}>
-                {logoSrc ? (
+                {logoData && logoData.src ? (
                   <img 
-                    src={logoSrc} 
+                    src={logoData.src} 
                     alt={`${name} logo`} 
                     title={name}
-                    className="h-16 object-contain brightness-0 invert" 
+                    className={cn("object-contain brightness-0 invert", logoData.className)} 
                   />
                 ) : (
                   <LogoPlaceholder name={name} className="h-12 w-32 text-2xl" />
