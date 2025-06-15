@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ContactInfo from '@/components/ContactInfo';
 import ScrollToTopButton from './ScrollToTopButton';
+import ScrollProgressIndicator from './ScrollProgressIndicator';
 
 type PageLayoutProps = {
   children: React.ReactNode;
@@ -21,6 +22,7 @@ const PageLayout = ({ children, showContact = true }: PageLayoutProps) => {
 
   return (
     <div className="min-h-screen bg-white w-full max-w-[100vw] overflow-x-hidden">
+      <ScrollProgressIndicator />
       <Navbar />
       {children}
       {showContact && <ContactInfo />}

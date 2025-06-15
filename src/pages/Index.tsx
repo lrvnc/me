@@ -11,8 +11,18 @@ import {
   Portfolio,
 } from '@/components/cv';
 import { personImg } from '@/lib/constants';
+import { motion } from 'framer-motion';
+import { sectionVariant } from '@/lib/animations';
 
 const Index = () => {
+  const sections = [
+    { component: <AboutMe />, id: 'about' },
+    { component: <Education />, id: 'education' },
+    { component: <WorkExperience />, id: 'work' },
+    { component: <Publications />, id: 'publications' },
+    { component: <Portfolio />, id: 'portfolio' },
+    { component: <CertificationsAndSkills />, id: 'skills' },
+  ];
 
   return (
     <PageLayout>
@@ -23,12 +33,17 @@ const Index = () => {
         keywords={['full stack developer', 'react', 'nodejs', 'portfolio', 'cv', 'john doe', 'publications', 'conferences']}
       />
       <HeroCV />
-      <AboutMe />
-      <Education />
-      <WorkExperience />
-      <Publications />
-      <Portfolio />
-      <CertificationsAndSkills />
+      {sections.map((section) => (
+        <motion.section
+          key={section.id}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={sectionVariant}
+        >
+          {section.component}
+        </motion.section>
+      ))}
     </PageLayout>
   );
 };
