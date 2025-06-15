@@ -7,7 +7,7 @@ const portfolioData = [
   {
     title: "E-commerce Platform",
     description: "A full-featured e-commerce site with product listings, cart, and checkout.",
-    image: "/lovable-uploads/4187f423-ba69-4043-be76-c43098488348.png",
+    image: "/cv/lovable-uploads/4187f423-ba69-4043-be76-c43098488348.png",
     tags: ["React", "Node.js", "Stripe"],
     liveUrl: "#",
     sourceUrl: "#"
@@ -15,7 +15,7 @@ const portfolioData = [
   {
     title: "Project Management Tool",
     description: "A Kanban-style project management app to track tasks and collaborate.",
-    image: "/lovable-uploads/e2f944f7-0d40-4c33-8ce1-30ef7cd3a4b0.png",
+    image: "/cv/lovable-uploads/e2f944f7-0d40-4c33-8ce1-30ef7cd3a4b0.png",
     tags: ["Vue.js", "Firebase"],
     liveUrl: "#",
     sourceUrl: "#"
@@ -23,7 +23,7 @@ const portfolioData = [
   {
     title: "Personal Blog",
     description: "A static blog generated with Next.js and Markdown for posts.",
-    image: "/lovable-uploads/af5ee2ce-3942-48bb-a2ad-3b49b419daf9.png",
+    image: "/cv/lovable-uploads/af5ee2ce-3942-48bb-a2ad-3b49b419daf9.png",
     tags: ["Next.js", "Tailwind CSS"],
     liveUrl: "#",
     sourceUrl: "#"
