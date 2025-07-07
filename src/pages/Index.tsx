@@ -19,12 +19,14 @@ const Index = () => {
         description="Leandro Venâncio personal webpage."
         imageUrl={personImg}
         keywords={[
-          "PhD Student",
-          "MSc in Engineering",
-          "BSc in Physics Engineering",
+          "Personal Blog",
+          "Science",
+          "Physics",
           "Portfolio",
           "CV",
           "Leandro Venâncio",
+          "Leandro Risso Venâncio",
+          "Optical Computing",
         ]}
       />
       <HeroCV />
