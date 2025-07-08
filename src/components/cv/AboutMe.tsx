@@ -4,10 +4,10 @@ import { ElegantCarousel } from "./ElegantCarousel";
 
 // You can add more images here for the gallery. I've used the existing ones as a starting point.
 const aboutMeImages = [
-  { src: "/imgs/mit1-zoom.jpg", alt: "Me at MIT - 2023" },
-  { src: "/imgs/espci2-zoom.jpg", alt: "My graduation at ESPCI - 2025" },
-  { src: "/imgs/espci3.jpg", alt: "My graduation at ESPCI - 2025" },
-  { src: "/imgs/trip1.jpg", alt: "Trip in UK - 2025" },
+  { src: "/me/imgs/mit1-zoom.jpg", alt: "Me at MIT - 2023" },
+  { src: "/me/imgs/espci2-zoom.jpg", alt: "My graduation at ESPCI - 2025" },
+  { src: "/me/imgs/espci3.jpg", alt: "My graduation at ESPCI - 2025" },
+  { src: "/me/imgs/trip1.jpg", alt: "Trip in UK - 2025" },
 ];
 
 const AboutMe = () => {
