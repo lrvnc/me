@@ -1,9 +1,6 @@
-
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://wrlds.com/sitemap.xml
-
-# Optimize crawling
-Crawl-delay: 10
+# Update this to your GitHub Pages production URL once deployed:
+# Example: https://lrvnc.github.io/me/sitemap.xml
+Sitemap: https://lrvnc.github.io/me/sitemap.xml
