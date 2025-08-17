@@ -15,7 +15,6 @@ const AboutMe = () => {
     <motion.section
       id="about"
       className="py-20 bg-white"
-      variants={sectionVariant}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

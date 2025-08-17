@@ -5,30 +5,34 @@ import { sectionVariant, listVariant, itemVariant } from "@/lib/animations";
 
 const portfolioData = [
   {
-    title: "E-commerce Platform",
+    title: "Project SSim",
     description:
       "A full-featured e-commerce site with product listings, cart, and checkout.",
-    image: "/lovable-uploads/4187f423-ba69-4043-be76-c43098488348.png",
-    tags: ["React", "Node.js", "Stripe"],
-    liveUrl: "#",
-    sourceUrl: "#",
+    image:
+      "https://github.com/lrvnc/project-SSim/raw/master/draw_control_example.gif",
+    tags: ["Python", "CoppeliaSim", "Robotics"],
+    liveUrl: null,
+    sourceUrl: "https://github.com/lrvnc/project-SSim",
   },
   {
-    title: "Project Management Tool",
+    title: "Backprop Tutorial",
     description:
-      "A Kanban-style project management app to track tasks and collaborate.",
-    image: "/lovable-uploads/e2f944f7-0d40-4c33-8ce1-30ef7cd3a4b0.png",
-    tags: ["Vue.js", "Firebase"],
-    liveUrl: "#",
-    sourceUrl: "#",
+      "Implementing the famous backprop algorithm from scratch using only numpy!",
+    image:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FaircAruvnKk%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=fbabe5714e059f5d18c938efe2c4229377bdc30ad5a3b8be5a9876e687bfb110",
+    tags: ["Numpy", "Neural Networks"],
+    liveUrl: null,
+    sourceUrl: "https://github.com/lrvnc/backprop-tutorial",
   },
   {
-    title: "Personal Blog",
-    description: "A static blog generated with Next.js and Markdown for posts.",
-    image: "/lovable-uploads/af5ee2ce-3942-48bb-a2ad-3b49b419daf9.png",
-    tags: ["Next.js", "Tailwind CSS"],
-    liveUrl: "#",
-    sourceUrl: "#",
+    title: "Qiskit Tutorial",
+    description:
+      "An introductory tutorial to Qiskit developed during my masters at ESPCI in Quantum Engineering",
+    image:
+      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frepository-images.githubusercontent.com%2F83821669%2F9207357a-cf9b-45ed-9974-0abc3df14b95&f=1&nofb=1&ipt=bb53ed66c9a7c3f7b99e2f71b6a3b4a11dc5e63118d12cd71774e22b6819c304",
+    tags: ["Qiskit", "Quantum Computing"],
+    liveUrl: null,
+    sourceUrl: "https://github.com/lrvnc/qiskit_espci",
   },
 ];
 
@@ -36,14 +40,13 @@ const Portfolio = () => (
   <motion.section
     id="portfolio"
     className="py-20 bg-white"
-    variants={sectionVariant}
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true, amount: 0.2 }}
   >
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-        Portfolio
+        Projects, Notes & Tutorials
       </h2>
       <motion.div
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -80,15 +83,6 @@ const Portfolio = () => (
                 <div className="flex gap-4 mt-auto">
                   <Button asChild>
                     <a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a
                       href={project.sourceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -96,6 +90,15 @@ const Portfolio = () => (
                       Source Code
                     </a>
                   </Button>
+                  {/* <Button variant="outline" asChild>
+                    <a
+                      href={project.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Source Code
+                    </a>
+                  </Button> */}
                 </div>
               </CardContent>
             </Card>

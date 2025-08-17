@@ -11,7 +11,7 @@ export const logoMap: { [key: string]: { src: string; className?: string } } = {
   },
 };
 
-// Country flags for education section.
+// Country flags for education/work experiece section.
 export const countryFlags = {
   "Federal University of São Carlos (UFSCar)": {
     country: "Brazil",
@@ -26,6 +26,31 @@ export const countryFlags = {
   "University of Queensland & University of Exeter": {
     country: "Australia & UK",
     flag: ["https://flagcdn.com/w40/au.png", "https://flagcdn.com/w40/gb.png"],
+    className: "w-6 h-auto",
+  },
+  "ETEC Trajano Camargo": {
+    country: "Brazil",
+    flag: "https://flagcdn.com/w40/br.png",
+    className: "w-6 h-auto",
+  },
+  "Banco BTG Pactual": {
+    country: "Brazil",
+    flag: "https://flagcdn.com/w40/br.png",
+    className: "w-6 h-auto",
+  },
+  MIT: {
+    country: "USA",
+    flag: "https://flagcdn.com/w40/us.png",
+    className: "w-6 h-auto",
+  },
+  LightOn: {
+    country: "France",
+    flag: "https://flagcdn.com/w40/fr.png",
+    className: "w-6 h-auto",
+  },
+  "UFSCar (Peer Tutoring Program)": {
+    country: "Brazil",
+    flag: "https://flagcdn.com/w40/br.png",
     className: "w-6 h-auto",
   },
 };

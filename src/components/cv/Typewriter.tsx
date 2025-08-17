@@ -1,6 +1,5 @@
-
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 interface TypewriterProps {
   phrases: string[];
@@ -9,9 +8,9 @@ interface TypewriterProps {
 
 const Typewriter = ({ phrases, className }: TypewriterProps) => {
   const [phraseIndex, setPhraseIndex] = useState(0);
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  
+
   const typingSpeed = 100;
   const deletingSpeed = 50;
   const delayBetweenPhrases = 2000;
@@ -27,13 +26,16 @@ const Typewriter = ({ phrases, className }: TypewriterProps) => {
 
       if (!isDeleting && updatedText === currentPhrase) {
         setTimeout(() => setIsDeleting(true), delayBetweenPhrases);
-      } else if (isDeleting && updatedText === '') {
+      } else if (isDeleting && updatedText === "") {
         setIsDeleting(false);
         setPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
       }
     };
 
-    const timer = setTimeout(handleTyping, isDeleting ? deletingSpeed : typingSpeed);
+    const timer = setTimeout(
+      handleTyping,
+      isDeleting ? deletingSpeed : typingSpeed
+    );
 
     return () => clearTimeout(timer);
   }, [text, isDeleting, phraseIndex, phrases]);
@@ -46,19 +48,18 @@ const Typewriter = ({ phrases, className }: TypewriterProps) => {
         repeat: Infinity,
         repeatDelay: 0,
         ease: "linear",
-        times: [0, 0.5, 1]
-      }
-    }
+        times: [0, 0.5, 1],
+      },
+    },
   };
 
   return (
     <span className={className}>
       {text}
       <motion.span
-        variants={cursorVariants}
         animate="blinking"
         className="inline-block w-0.5 h-full bg-gray-400 ml-1"
-        style={{ height: '1em', verticalAlign: 'text-bottom' }}
+        style={{ height: "1em", verticalAlign: "text-bottom" }}
       />
     </span>
   );

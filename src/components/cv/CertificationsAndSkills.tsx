@@ -1,7 +1,6 @@
-
-import { motion } from 'framer-motion';
-import { Award, MessageSquare, Code } from 'lucide-react';
-import { sectionVariant, listVariant, itemVariant } from '@/lib/animations';
+import { motion } from "framer-motion";
+import { Award, MessageSquare, Code } from "lucide-react";
+import { sectionVariant, listVariant, itemVariant } from "@/lib/animations";
 import { Card, CardHeader, CardContent, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -20,28 +19,58 @@ const certificationsData = [
     name: "Professional Scrum Master™ I (PSM I)",
     issuer: "Scrum.org",
     year: "2021",
-  }
+  },
 ];
 
 const skillsData = {
-  frontend: ["React", "TypeScript", "Next.js", "Redux", "Tailwind CSS", "HTML5 & CSS3", "Framer Motion"],
-  backend: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs", "GraphQL", "tRPC"],
-  tools: ["Git & GitHub", "Docker", "Webpack", "Jira", "Figma", "CI/CD", "Vite"],
-  languages: ["English: Native", "Spanish: Professional", "French: Basic"],
+  frontend: [
+    "React",
+    "TypeScript",
+    "Next.js",
+    "Redux",
+    "Tailwind CSS",
+    "HTML5 & CSS3",
+    "Framer Motion",
+  ],
+  backend: [
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "PostgreSQL",
+    "REST APIs",
+    "GraphQL",
+    "tRPC",
+  ],
+  tools: [
+    "Git & GitHub",
+    "Docker",
+    "Webpack",
+    "Jira",
+    "Figma",
+    "CI/CD",
+    "Vite",
+  ],
+  languages: [
+    "Portuguese: Native",
+    "English: C1",
+    "Spanish: Professional",
+    "French: C1",
+  ],
 };
 
 const CertificationsAndSkills = () => (
-  <motion.section 
-    id="certifications" 
+  <motion.section
+    id="certifications"
     className="py-20 bg-gray-50"
-    variants={sectionVariant}
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true, amount: 0.2 }}
   >
     <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Certifications & Skills</h2>
-      <motion.div 
+      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+        Certifications & Skills
+      </h2>
+      <motion.div
         className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8"
         variants={listVariant}
         initial="hidden"
@@ -58,10 +87,12 @@ const CertificationsAndSkills = () => (
             </CardHeader>
             <CardContent>
               <ul className="space-y-4">
-                {certificationsData.map(cert => (
+                {certificationsData.map((cert) => (
                   <li key={cert.name}>
                     <h4 className="font-semibold text-gray-800">{cert.name}</h4>
-                    <p className="text-sm text-gray-500">{cert.issuer} &bull; {cert.year}</p>
+                    <p className="text-sm text-gray-500">
+                      {cert.issuer} &bull; {cert.year}
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -79,21 +110,39 @@ const CertificationsAndSkills = () => (
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-800">Frontend</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-800">
+                  Frontend
+                </h3>
                 <div className="flex flex-wrap gap-2">
-                  {skillsData.frontend.map(skill => <Badge key={skill} variant="secondary">{skill}</Badge>)}
+                  {skillsData.frontend.map((skill) => (
+                    <Badge key={skill} variant="secondary">
+                      {skill}
+                    </Badge>
+                  ))}
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-800">Backend</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-800">
+                  Backend
+                </h3>
                 <div className="flex flex-wrap gap-2">
-                  {skillsData.backend.map(skill => <Badge key={skill} variant="secondary">{skill}</Badge>)}
+                  {skillsData.backend.map((skill) => (
+                    <Badge key={skill} variant="secondary">
+                      {skill}
+                    </Badge>
+                  ))}
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-800">Tools & DevOps</h3>
+                <h3 className="text-lg font-semibold mb-3 text-gray-800">
+                  Tools & DevOps
+                </h3>
                 <div className="flex flex-wrap gap-2">
-                  {skillsData.tools.map(skill => <Badge key={skill} variant="secondary">{skill}</Badge>)}
+                  {skillsData.tools.map((skill) => (
+                    <Badge key={skill} variant="secondary">
+                      {skill}
+                    </Badge>
+                  ))}
                 </div>
               </div>
             </CardContent>
@@ -110,7 +159,11 @@ const CertificationsAndSkills = () => (
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
-                {skillsData.languages.map(lang => <Badge key={lang} variant="secondary">{lang}</Badge>)}
+                {skillsData.languages.map((lang) => (
+                  <Badge key={lang} variant="secondary">
+                    {lang}
+                  </Badge>
+                ))}
               </div>
             </CardContent>
           </Card>

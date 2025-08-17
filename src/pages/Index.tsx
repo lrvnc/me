@@ -25,7 +25,7 @@ const Index = () => {
       <WorkExperience />
       <Publications />
       <Portfolio />
-      <CertificationsAndSkills />
+      {/* <CertificationsAndSkills /> */}
     </PageLayout>
   );
 };
