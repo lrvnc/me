@@ -17,21 +17,8 @@ const Blog = () => {
   return (
     <PageLayout>
       <SEO
-        title="WRLDS - News and insights about smart textile technology"
-        description="Personal blog."
-        imageUrl={
-          featuredPost?.imageUrl ||
-          "/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png"
-        }
-        keywords={[
-          "smart textiles",
-          "textile technology",
-          "industry news",
-          "sensor innovation",
-          "wearable tech",
-          "smart fabrics",
-        ]}
-        type="website"
+        title="Blog — Your Name"
+        description="Notes, articles, and updates."
       />
 
       <div className="w-full pt-24 pb-12 bg-gradient-to-b from-black to-gray-900 text-white">

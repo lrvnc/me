@@ -18,16 +18,6 @@ const Index = () => {
         title="Leandro Risso Venâncio - Joint PhD Student in Physics and Computer Science"
         description="Leandro Venâncio personal webpage."
         imageUrl={personImg}
-        keywords={[
-          "Personal Blog",
-          "Science",
-          "Physics",
-          "Portfolio",
-          "CV",
-          "Leandro Venâncio",
-          "Leandro Risso Venâncio",
-          "Optical Computing",
-        ]}
       />
       <HeroCV />
       <AboutMe />
