@@ -12,8 +12,8 @@ const Index = () => {
   return (
     <PageLayout>
       <SEO
-        title="Leandro Risso Venâncio - Joint PhD Student in Physics and Computer Science"
-        description="Leandro Venâncio personal webpage."
+        title="Leandro R. Venâncio | Researcher & Engineer"
+        description="Leandro R. Venâncio personal webpage."
         imageUrl={personImg}
       />
       <LandingIntro />

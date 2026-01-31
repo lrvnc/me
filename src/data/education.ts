@@ -9,7 +9,7 @@ export type EduItem = {
 
 export const educationData: EduItem[] = [
     {
-        degree: "Joint PhD in Physics",
+        degree: "Joint PhD in Physics (QUEX)",
         university: "University of Queensland & University of Exeter",
         period: "Jan 2025 - Present",
         location: "Brisbane, AU & Exeter, UK",
@@ -28,7 +28,7 @@ export const educationData: EduItem[] = [
         description:
             "Grande École within Université PSL at the physics-chemistry interface, with extensive research training. Home to six Nobel Prizes; former directors include Marie Curie and Pierre-Gilles de Gennes. I chose to specialize in quantum and optical physics, and in scientific computing.",
         highlights: [
-            "Awarded with the Excellence Scholarship from the ESPCI Fonds",
+            "🏆 Awarded with the Excellence Scholarship from the ESPCI Fonds",
             // "GPA: 4.0/4.0",
         ],
     },
@@ -40,6 +40,7 @@ export const educationData: EduItem[] = [
         description:
             "The Federal University of São Carlos is a leading Brazilian university and the first to offer an Engineering Physics program—establishing the course’s standards and tradition—with strong foundations in physics, mathematics, and computation.",
         highlights: [
+            "🏆 First in class (Jan/2025 cohort)",
             // "Extracurriculars: robotics team, junior enterprise, and tutoring",
             // "GPA: 8.46/10",
         ],

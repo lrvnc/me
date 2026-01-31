@@ -3,19 +3,38 @@ import { CodeProject } from './types';
 export const codeData: CodeProject[] = [
     {
         id: 1,
-        title: "Portfolio Website",
-        description: "The source code for this website. Built with React, TypeScript, and Tailwind CSS.",
-        tags: ["React", "TypeScript", "Tailwind CSS"],
-        githubUrl: "https://github.com/lrvnc/me",
+        title: "Personal Website",
+        description: "Source code for this website.",
+        tags: ["React", "Webdev"],
+        githubUrl: "https://github.com/lrvnc/lrvnc.github.io",
         demoUrl: "https://lrvnc.github.io",
-        date: "2024-01-20"
+        date: "2026-02-01"
     },
     {
         id: 2,
-        title: "Divergence & Laplacian Visualizer",
-        description: "Interactive visualization of vector calculus concepts using Three.js.",
-        tags: ["JavaScript", "Three.js", "Math"],
-        githubUrl: "https://github.com/lrvnc/math-viz",
-        date: "2023-11-15"
+        title: "Anki Project",
+        description: "A small web scrapping project to create anki cards.",
+        tags: ["Python", "Web Scrapping"],
+        githubUrl: "https://github.com/lrvnc/anki-project",
+        demoUrl: "",
+        date: "2021-05-02"
+    },
+    {
+        id: 3,
+        title: "VSS Soccer Robot Simulator",
+        description: "Simulating the control system of two wheeled robots for the VSS (Very Small Size) RoboCup competition. Run aside with CoppeliaSim.",
+        tags: ["CoppeliaSim", "Python", "Robotics"],
+        githubUrl: "https://github.com/lrvnc/project-SSim",
+        demoUrl: "",
+        date: "2021-11-03"
+    },
+    {
+        id: 4,
+        title: "Backprop Tutorial",
+        description: "Coding backpropagation from scratch using only numpy.",
+        tags: ["Python", "NumPy", "Machine Learning"],
+        githubUrl: "https://github.com/lrvnc/backprop-tutorial",
+        demoUrl: "",
+        date: "2025-07-05"
     }
 ];
