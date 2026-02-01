@@ -5,7 +5,7 @@ export const heroData = {
         "Optical Computing.",
         "Machine Learning.",
         "Complex Media.",
-        "Physics and Engineering without coffee. Nonlinear effects."
+        // "Physics and Engineering without coffee. Nonlinear effects."
     ],
     cvPdf: "/pdfs/Leandro_CV_20250615.pdf",
     email: "rissov.leandro@email.com", // Keeping consistent with HeroCV component although ContactInfo has gmail
