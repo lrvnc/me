@@ -2,13 +2,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Tag, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { blogPosts } from "@/data/blog/posts";
 
 interface PostsProps {
     searchQuery: string;
     selectedTags?: string[];
 }
-
 
 const Posts = ({ searchQuery, selectedTags = [] }: PostsProps) => {
     const filteredPosts = blogPosts.filter(post => {
@@ -56,44 +56,46 @@ const Posts = ({ searchQuery, selectedTags = [] }: PostsProps) => {
                             whileHover={{ y: -5 }} // Subtle vertical lift on hover
                             className="h-full"
                         >
-                            <Card className="h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer bg-card/50 backdrop-blur-sm flex flex-col">
-                                <div className="h-48 overflow-hidden relative shrink-0">
-                                    <img
-                                        src={post.image}
-                                        alt={post.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                                </div>
-                                <CardHeader className="space-y-4">
-                                    <div className="flex items-center justify-between text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                                        <div className="flex items-center gap-2">
-                                            <Calendar className="w-3 h-3" />
-                                            <span>{post.date}</span>
+                            <Link to={`/blog/${post.slug}`} className="block h-full">
+                                <Card className="h-full border-none shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer bg-card/50 backdrop-blur-sm flex flex-col">
+                                    <div className="h-48 overflow-hidden relative shrink-0">
+                                        <img
+                                            src={post.image}
+                                            alt={post.title}
+                                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                                    </div>
+                                    <CardHeader className="space-y-4">
+                                        <div className="flex items-center justify-between text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                                            <div className="flex items-center gap-2">
+                                                <Calendar className="w-3 h-3" />
+                                                <span>{post.date}</span>
+                                            </div>
+                                            <span>{post.readTime}</span>
                                         </div>
-                                        <span>{post.readTime}</span>
-                                    </div>
-                                    <CardTitle className="text-xl group-hover:text-primary transition-colors line-clamp-2">
-                                        {post.title}
-                                    </CardTitle>
-                                    <div className="flex flex-wrap gap-2">
-                                        {post.tags.map((tag) => (
-                                            <Badge key={tag} variant="secondary" className="flex items-center gap-1 text-xs">
-                                                <Tag className="w-3 h-3" />
-                                                {tag}
-                                            </Badge>
-                                        ))}
-                                    </div>
-                                </CardHeader>
-                                <CardContent className="flex-1 flex flex-col justify-between">
-                                    <CardDescription className="text-base text-muted-foreground line-clamp-3 mb-6">
-                                        {post.excerpt}
-                                    </CardDescription>
-                                    <div className="flex items-center text-primary font-medium group-hover:translate-x-1 transition-transform mt-auto">
-                                        Read Article <ArrowRight className="w-4 h-4 ml-2" />
-                                    </div>
-                                </CardContent>
-                            </Card>
+                                        <CardTitle className="text-xl group-hover:text-primary transition-colors line-clamp-2">
+                                            {post.title}
+                                        </CardTitle>
+                                        <div className="flex flex-wrap gap-2">
+                                            {post.tags.map((tag) => (
+                                                <Badge key={tag} variant="secondary" className="flex items-center gap-1 text-xs">
+                                                    <Tag className="w-3 h-3" />
+                                                    {tag}
+                                                </Badge>
+                                            ))}
+                                        </div>
+                                    </CardHeader>
+                                    <CardContent className="flex-1 flex flex-col justify-between">
+                                        <CardDescription className="text-base text-muted-foreground line-clamp-3 mb-6">
+                                            {post.excerpt}
+                                        </CardDescription>
+                                        <div className="flex items-center text-primary font-medium group-hover:translate-x-1 transition-transform mt-auto">
+                                            Read More <ArrowRight className="w-4 h-4 ml-2" />
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </Link>
                         </motion.div>
                     ))}
                 </motion.div>
